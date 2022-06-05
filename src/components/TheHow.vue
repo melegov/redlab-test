@@ -60,21 +60,28 @@ watch(activePhoto, () => {
     <div class="left-menu" :class="{disableHover}">
         <span>Как мы убираем</span>
         <ul>
-            <li v-for="(item, i) in howData" @click="activeTipIndex = -1; activeIndex = i" :class="{'active': item === activePhoto}">
+            <li v-for="(item, i) in howData" 
+                @click="activeTipIndex = -1; activeIndex = i"
+                :class="{'active': item === activePhoto}">
                 {{ item.title }}
             </li>
         </ul>
     </div>
     <div class="photos">
         <Transition v-for="(itemTip, i) in activePhoto.tips" name="tip">
-            <div class="tip" :style="{ left: itemTip.x + '%', top: itemTip.y + '%' }" :class="{'active': activeTip === itemTip}" @click="activeTipIndex = activeTipIndex === i ? -1 : activeTipIndex = i">
+            <div class="tip" 
+                :style="{ left: itemTip.x + '%', top: itemTip.y + '%' }"
+                :class="{'active': activeTip === itemTip}"
+                @click="activeTipIndex = activeTipIndex === i ? -1 : activeTipIndex = i">
                 <div class="text">{{itemTip.text}}</div>
                 <span>+</span>
             </div>
         </Transition>
 
         <Transition v-for="item in howData" name="slide">
-            <img :src="item.imgUrl" v-show="item === activePhoto" :class="{'active-photo': item === activePhoto}">
+            <img :src="item.imgUrl"
+            v-show="item === activePhoto"
+            :class="{'active-photo': item === activePhoto}">
         </Transition>
     </div>
 </div>
@@ -129,7 +136,7 @@ watch(activePhoto, () => {
 }
 
 .left-menu ul li {
-    font-size: calc(44px);
+    font-size: 44px;
     line-height: 52px;
     font-weight: 400;
     margin-bottom: 22px;
@@ -311,6 +318,14 @@ p {
     p {
         width: 40%;
         padding-left: 0;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 940px) {
+    .left-menu ul li {
+        font-size: 30px;
+        line-height: 30px;
+        width: 177px;
     }
 }
 </style>

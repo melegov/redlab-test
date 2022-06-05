@@ -38,33 +38,40 @@
 }
 
 .section-hero h1 {
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 48px;
-  margin-bottom: 20px;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 48px;
+	margin-bottom: 20px;
 }
 
 .section-hero p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
 }
 
 @media (min-width: 730px) {
-  .section-hero {
-    background-size: contain;
-  }
+	.section-hero {
+		background-size: contain;
+	}
 
-  .section-hero .container {
-    padding-left: 54%;
-  }
-  .section-hero h1 {
-    font-size: 76px;
-    line-height: 77px;
-  }
+	.section-hero .container {
+		padding-left: 54%;
+	}
+	.section-hero h1 {
+		font-size: 76px;
+		line-height: 77px;
+	}
 
-  .section-hero p {
-    font-size: 18px;
-  }
+	.section-hero p {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 730px) and (orientation: landscape) {
+	.section-hero h1 {
+		font-size: 50px;
+		line-height: 50px;
+	}
 }
 </style>

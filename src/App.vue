@@ -30,7 +30,7 @@ function handleScroll(e) {
 
 		if (state.isScrollBottom) { state.isScrollBottom = false; }
 		if (!state.isScrollBottom) {
-			state.isScrollBottom = howSection.offsetTop + howSection.clientHeight <= window.pageYOffset + document.documentElement.clientHeight + 10;
+			state.isScrollBottom = howSection.offsetTop + howSection.clientHeight <= window.pageYOffset + document.documentElement.clientHeight + 90;
 			if (state.isScrollBottom) {
 				setTimeout(() => {
 					state.isScrollBottom = true;
